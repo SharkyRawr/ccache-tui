@@ -14,7 +14,7 @@ use ratatui::crossterm::{execute, terminal};
 use ratatui::layout::{Constraint, Direction, Layout, Rect};
 use ratatui::prelude::*;
 use ratatui::text::Line;
-use ratatui::widgets::{Axis, Block, Borders, Chart, Dataset, Gauge, Paragraph};
+use ratatui::widgets::{Axis, Block, Borders, Chart, Clear, Dataset, Gauge, Paragraph};
 
 /// Default polling interval in milliseconds.
 const DEFAULT_POLL_MS: u64 = 1000;
@@ -764,7 +764,7 @@ fn window_label(window: Duration) -> String {
 
 /// Draws a centered error overlay when ccache invocation fails.
 fn render_error_overlay(frame: &mut Frame, area: Rect, err: &CcacheError) {
-    let overlay = centered_rect(80, 60, area);
+    let overlay = centered_rect(70, 40, area);
     let mut lines = Vec::new();
     let code_line = match err.code {
         Some(code) => format!("Exit code: {code}"),
@@ -777,6 +777,10 @@ fn render_error_overlay(frame: &mut Frame, area: Rect, err: &CcacheError) {
     } else {
         lines.extend(err.message.lines().map(|line| line.to_string()));
     }
+    lines.push(String::new());
+    lines.push("Command: ccache -s".to_string());
+    let path = std::env::var("PATH").unwrap_or_else(|_| "n/a".to_string());
+    lines.push(format!("PATH: {path}"));
 
     let block = Block::default()
         .title("CCACHE ERROR")
@@ -785,6 +789,7 @@ fn render_error_overlay(frame: &mut Frame, area: Rect, err: &CcacheError) {
     let paragraph = Paragraph::new(lines.join("\n"))
         .block(block)
         .style(Style::default().fg(Color::Red));
+    frame.render_widget(Clear, overlay);
     frame.render_widget(paragraph, overlay);
 }
 
