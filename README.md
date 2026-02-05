@@ -31,3 +31,6 @@ cargo run -- --window-seconds 300 --poll-ms 1000 --theme classic
 ## Controls
 - `q` or `Esc`: quit
 - `Ctrl-C`: quit
+
+## License
+CC BY-NC-SA 4.0
