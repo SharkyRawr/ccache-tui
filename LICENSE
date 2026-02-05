@@ -1,0 +1,11 @@
+Copyright 2026 @SharkyRawr. All rights reserved.
+
+You may view, use, and modify this source code for personal, non-commercial use only. "Non-commercial" means use that is not intended for or directed toward commercial advantage or monetary compensation. Use of this software in the course of paid work, freelance engagements, or revenue-generating activities is considered commercial use and is prohibited without prior written permission.
+
+Use by or on behalf of government institutions, agencies, or contractors acting in a government capacity is prohibited without prior written permission from the copyright holder.
+
+Redistribution is permitted only through public package registries (e.g., npm, PyPI, HACS) in unmodified form, as a dependency of another project, or through automated dependency resolution by package managers. Redistribution outside of these channels, or of modified versions, is prohibited without prior written permission from the copyright holder. Build-time transformations (e.g., bundling, minification, transpilation) performed as part of a dependent project's build process do not constitute modification of this software.
+
+You may submit contributions (pull requests, patches, issues) to the original repository. By submitting a contribution, you represent that you have the right to grant, and do grant, the copyright holder a perpetual, irrevocable, royalty-free right to use, modify, and relicense your contribution as part of this project. You warrant that your contribution is your original work or that you have sufficient rights to make this grant.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
